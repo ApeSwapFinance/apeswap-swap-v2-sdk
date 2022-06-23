@@ -198,3 +198,7 @@ export interface Pool {
   feesSnapshot?: string;
   boost?: string;
 }
+
+export interface PoolModel extends Pool {
+  liquidity: () => Promise<string>;
+}
