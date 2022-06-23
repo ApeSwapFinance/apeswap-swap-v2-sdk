@@ -3,6 +3,8 @@ import { Network } from './lib/constants/network';
 import { Contract } from '@ethersproject/contracts';
 import { PoolDataService, TokenPriceService } from '@balancer-labs/sor';
 
+export * from '@/modules/data/types';
+
 export type Address = string;
 
 export interface BalancerSdkConfig {
