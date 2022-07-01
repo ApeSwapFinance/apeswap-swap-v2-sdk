@@ -12,4 +12,8 @@ export const namedTokens: Record<string, any> = {
     address: '0x2260fac5e5542a773aa44fbcfedf7c193bc2c599',
     decimals: 8,
   },
+  BADGER: {
+    address: '0x3472a5a71965499acd81997a54bba8d852c6e53d',
+    decimals: 18,
+  },
 };
