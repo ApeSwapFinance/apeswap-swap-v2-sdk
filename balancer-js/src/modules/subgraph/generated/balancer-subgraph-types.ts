@@ -57,6 +57,7 @@ export type AmpUpdate_Filter = {
   id_not?: InputMaybe<Scalars['ID']>;
   id_not_in?: InputMaybe<Array<Scalars['ID']>>;
   poolId?: InputMaybe<Scalars['String']>;
+  poolId_?: InputMaybe<Pool_Filter>;
   poolId_contains?: InputMaybe<Scalars['String']>;
   poolId_contains_nocase?: InputMaybe<Scalars['String']>;
   poolId_ends_with?: InputMaybe<Scalars['String']>;
@@ -204,6 +205,7 @@ export type BalancerSnapshot_Filter = {
   totalSwapVolume_not?: InputMaybe<Scalars['BigDecimal']>;
   totalSwapVolume_not_in?: InputMaybe<Array<Scalars['BigDecimal']>>;
   vault?: InputMaybe<Scalars['String']>;
+  vault_?: InputMaybe<Balancer_Filter>;
   vault_contains?: InputMaybe<Scalars['String']>;
   vault_contains_nocase?: InputMaybe<Scalars['String']>;
   vault_ends_with?: InputMaybe<Scalars['String']>;
@@ -255,6 +257,7 @@ export type Balancer_Filter = {
   poolCount_lte?: InputMaybe<Scalars['Int']>;
   poolCount_not?: InputMaybe<Scalars['Int']>;
   poolCount_not_in?: InputMaybe<Array<Scalars['Int']>>;
+  pools_?: InputMaybe<Pool_Filter>;
   totalLiquidity?: InputMaybe<Scalars['BigDecimal']>;
   totalLiquidity_gt?: InputMaybe<Scalars['BigDecimal']>;
   totalLiquidity_gte?: InputMaybe<Scalars['BigDecimal']>;
@@ -346,6 +349,7 @@ export type GradualWeightUpdate_Filter = {
   id_not?: InputMaybe<Scalars['ID']>;
   id_not_in?: InputMaybe<Array<Scalars['ID']>>;
   poolId?: InputMaybe<Scalars['String']>;
+  poolId_?: InputMaybe<Pool_Filter>;
   poolId_contains?: InputMaybe<Scalars['String']>;
   poolId_contains_nocase?: InputMaybe<Scalars['String']>;
   poolId_ends_with?: InputMaybe<Scalars['String']>;
@@ -439,6 +443,7 @@ export type Investment_Filter = {
   id_not?: InputMaybe<Scalars['ID']>;
   id_not_in?: InputMaybe<Array<Scalars['ID']>>;
   poolTokenId?: InputMaybe<Scalars['String']>;
+  poolTokenId_?: InputMaybe<PoolToken_Filter>;
   poolTokenId_contains?: InputMaybe<Scalars['String']>;
   poolTokenId_contains_nocase?: InputMaybe<Scalars['String']>;
   poolTokenId_ends_with?: InputMaybe<Scalars['String']>;
@@ -506,6 +511,7 @@ export type JoinExit_Filter = {
   id_not?: InputMaybe<Scalars['ID']>;
   id_not_in?: InputMaybe<Array<Scalars['ID']>>;
   pool?: InputMaybe<Scalars['String']>;
+  pool_?: InputMaybe<Pool_Filter>;
   pool_contains?: InputMaybe<Scalars['String']>;
   pool_contains_nocase?: InputMaybe<Scalars['String']>;
   pool_ends_with?: InputMaybe<Scalars['String']>;
@@ -550,6 +556,7 @@ export type JoinExit_Filter = {
   type_not?: InputMaybe<InvestType>;
   type_not_in?: InputMaybe<Array<InvestType>>;
   user?: InputMaybe<Scalars['String']>;
+  user_?: InputMaybe<User_Filter>;
   user_contains?: InputMaybe<Scalars['String']>;
   user_contains_nocase?: InputMaybe<Scalars['String']>;
   user_ends_with?: InputMaybe<Scalars['String']>;
@@ -618,6 +625,7 @@ export type LatestPrice_Filter = {
   id_not?: InputMaybe<Scalars['ID']>;
   id_not_in?: InputMaybe<Array<Scalars['ID']>>;
   poolId?: InputMaybe<Scalars['String']>;
+  poolId_?: InputMaybe<Pool_Filter>;
   poolId_contains?: InputMaybe<Scalars['String']>;
   poolId_contains_nocase?: InputMaybe<Scalars['String']>;
   poolId_ends_with?: InputMaybe<Scalars['String']>;
@@ -794,6 +802,7 @@ export type PoolHistoricalLiquidity_Filter = {
   id_not?: InputMaybe<Scalars['ID']>;
   id_not_in?: InputMaybe<Array<Scalars['ID']>>;
   poolId?: InputMaybe<Scalars['String']>;
+  poolId_?: InputMaybe<Pool_Filter>;
   poolId_contains?: InputMaybe<Scalars['String']>;
   poolId_contains_nocase?: InputMaybe<Scalars['String']>;
   poolId_ends_with?: InputMaybe<Scalars['String']>;
@@ -883,6 +892,7 @@ export type PoolShare_Filter = {
   id_not?: InputMaybe<Scalars['ID']>;
   id_not_in?: InputMaybe<Array<Scalars['ID']>>;
   poolId?: InputMaybe<Scalars['String']>;
+  poolId_?: InputMaybe<Pool_Filter>;
   poolId_contains?: InputMaybe<Scalars['String']>;
   poolId_contains_nocase?: InputMaybe<Scalars['String']>;
   poolId_ends_with?: InputMaybe<Scalars['String']>;
@@ -903,6 +913,7 @@ export type PoolShare_Filter = {
   poolId_starts_with?: InputMaybe<Scalars['String']>;
   poolId_starts_with_nocase?: InputMaybe<Scalars['String']>;
   userAddress?: InputMaybe<Scalars['String']>;
+  userAddress_?: InputMaybe<User_Filter>;
   userAddress_contains?: InputMaybe<Scalars['String']>;
   userAddress_contains_nocase?: InputMaybe<Scalars['String']>;
   userAddress_ends_with?: InputMaybe<Scalars['String']>;
@@ -969,6 +980,7 @@ export type PoolSnapshot_Filter = {
   liquidity_not?: InputMaybe<Scalars['BigDecimal']>;
   liquidity_not_in?: InputMaybe<Array<Scalars['BigDecimal']>>;
   pool?: InputMaybe<Scalars['String']>;
+  pool_?: InputMaybe<Pool_Filter>;
   pool_contains?: InputMaybe<Scalars['String']>;
   pool_contains_nocase?: InputMaybe<Scalars['String']>;
   pool_ends_with?: InputMaybe<Scalars['String']>;
@@ -1113,6 +1125,7 @@ export type PoolToken_Filter = {
   invested_lte?: InputMaybe<Scalars['BigDecimal']>;
   invested_not?: InputMaybe<Scalars['BigDecimal']>;
   invested_not_in?: InputMaybe<Array<Scalars['BigDecimal']>>;
+  investments_?: InputMaybe<Investment_Filter>;
   name?: InputMaybe<Scalars['String']>;
   name_contains?: InputMaybe<Scalars['String']>;
   name_contains_nocase?: InputMaybe<Scalars['String']>;
@@ -1134,6 +1147,7 @@ export type PoolToken_Filter = {
   name_starts_with?: InputMaybe<Scalars['String']>;
   name_starts_with_nocase?: InputMaybe<Scalars['String']>;
   poolId?: InputMaybe<Scalars['String']>;
+  poolId_?: InputMaybe<Pool_Filter>;
   poolId_contains?: InputMaybe<Scalars['String']>;
   poolId_contains_nocase?: InputMaybe<Scalars['String']>;
   poolId_ends_with?: InputMaybe<Scalars['String']>;
@@ -1182,6 +1196,7 @@ export type PoolToken_Filter = {
   symbol_starts_with?: InputMaybe<Scalars['String']>;
   symbol_starts_with_nocase?: InputMaybe<Scalars['String']>;
   token?: InputMaybe<Scalars['String']>;
+  token_?: InputMaybe<Token_Filter>;
   token_contains?: InputMaybe<Scalars['String']>;
   token_contains_nocase?: InputMaybe<Scalars['String']>;
   token_ends_with?: InputMaybe<Scalars['String']>;
@@ -1271,6 +1286,7 @@ export type Pool_Filter = {
   factory_not?: InputMaybe<Scalars['Bytes']>;
   factory_not_contains?: InputMaybe<Scalars['Bytes']>;
   factory_not_in?: InputMaybe<Array<Scalars['Bytes']>>;
+  historicalValues_?: InputMaybe<PoolHistoricalLiquidity_Filter>;
   holdersCount?: InputMaybe<Scalars['BigInt']>;
   holdersCount_gt?: InputMaybe<Scalars['BigInt']>;
   holdersCount_gte?: InputMaybe<Scalars['BigInt']>;
@@ -1357,12 +1373,14 @@ export type Pool_Filter = {
   poolType_not_starts_with_nocase?: InputMaybe<Scalars['String']>;
   poolType_starts_with?: InputMaybe<Scalars['String']>;
   poolType_starts_with_nocase?: InputMaybe<Scalars['String']>;
+  priceRateProviders_?: InputMaybe<PriceRateProvider_Filter>;
   principalToken?: InputMaybe<Scalars['Bytes']>;
   principalToken_contains?: InputMaybe<Scalars['Bytes']>;
   principalToken_in?: InputMaybe<Array<Scalars['Bytes']>>;
   principalToken_not?: InputMaybe<Scalars['Bytes']>;
   principalToken_not_contains?: InputMaybe<Scalars['Bytes']>;
   principalToken_not_in?: InputMaybe<Array<Scalars['Bytes']>>;
+  shares_?: InputMaybe<PoolShare_Filter>;
   strategyType?: InputMaybe<Scalars['Int']>;
   strategyType_gt?: InputMaybe<Scalars['Int']>;
   strategyType_gte?: InputMaybe<Scalars['Int']>;
@@ -1391,6 +1409,7 @@ export type Pool_Filter = {
   swapsCount_lte?: InputMaybe<Scalars['BigInt']>;
   swapsCount_not?: InputMaybe<Scalars['BigInt']>;
   swapsCount_not_in?: InputMaybe<Array<Scalars['BigInt']>>;
+  swaps_?: InputMaybe<Swap_Filter>;
   symbol?: InputMaybe<Scalars['String']>;
   symbol_contains?: InputMaybe<Scalars['String']>;
   symbol_contains_nocase?: InputMaybe<Scalars['String']>;
@@ -1417,6 +1436,7 @@ export type Pool_Filter = {
   tokensList_not?: InputMaybe<Array<Scalars['Bytes']>>;
   tokensList_not_contains?: InputMaybe<Array<Scalars['Bytes']>>;
   tokensList_not_contains_nocase?: InputMaybe<Array<Scalars['Bytes']>>;
+  tokens_?: InputMaybe<PoolToken_Filter>;
   totalLiquidity?: InputMaybe<Scalars['BigDecimal']>;
   totalLiquidity_gt?: InputMaybe<Scalars['BigDecimal']>;
   totalLiquidity_gte?: InputMaybe<Scalars['BigDecimal']>;
@@ -1480,6 +1500,7 @@ export type Pool_Filter = {
   upperTarget_not?: InputMaybe<Scalars['BigDecimal']>;
   upperTarget_not_in?: InputMaybe<Array<Scalars['BigDecimal']>>;
   vaultID?: InputMaybe<Scalars['String']>;
+  vaultID_?: InputMaybe<Balancer_Filter>;
   vaultID_contains?: InputMaybe<Scalars['String']>;
   vaultID_contains_nocase?: InputMaybe<Scalars['String']>;
   vaultID_ends_with?: InputMaybe<Scalars['String']>;
@@ -1499,6 +1520,7 @@ export type Pool_Filter = {
   vaultID_not_starts_with_nocase?: InputMaybe<Scalars['String']>;
   vaultID_starts_with?: InputMaybe<Scalars['String']>;
   vaultID_starts_with_nocase?: InputMaybe<Scalars['String']>;
+  weightUpdates_?: InputMaybe<GradualWeightUpdate_Filter>;
   wrappedIndex?: InputMaybe<Scalars['Int']>;
   wrappedIndex_gt?: InputMaybe<Scalars['Int']>;
   wrappedIndex_gte?: InputMaybe<Scalars['Int']>;
@@ -1603,6 +1625,7 @@ export type PriceRateProvider_Filter = {
   lastCached_not?: InputMaybe<Scalars['Int']>;
   lastCached_not_in?: InputMaybe<Array<Scalars['Int']>>;
   poolId?: InputMaybe<Scalars['String']>;
+  poolId_?: InputMaybe<Pool_Filter>;
   poolId_contains?: InputMaybe<Scalars['String']>;
   poolId_contains_nocase?: InputMaybe<Scalars['String']>;
   poolId_ends_with?: InputMaybe<Scalars['String']>;
@@ -1631,6 +1654,7 @@ export type PriceRateProvider_Filter = {
   rate_not?: InputMaybe<Scalars['BigDecimal']>;
   rate_not_in?: InputMaybe<Array<Scalars['BigDecimal']>>;
   token?: InputMaybe<Scalars['String']>;
+  token_?: InputMaybe<PoolToken_Filter>;
   token_contains?: InputMaybe<Scalars['String']>;
   token_contains_nocase?: InputMaybe<Scalars['String']>;
   token_ends_with?: InputMaybe<Scalars['String']>;
@@ -2559,6 +2583,7 @@ export type Swap_Filter = {
   id_not?: InputMaybe<Scalars['ID']>;
   id_not_in?: InputMaybe<Array<Scalars['ID']>>;
   poolId?: InputMaybe<Scalars['String']>;
+  poolId_?: InputMaybe<Pool_Filter>;
   poolId_contains?: InputMaybe<Scalars['String']>;
   poolId_contains_nocase?: InputMaybe<Scalars['String']>;
   poolId_ends_with?: InputMaybe<Scalars['String']>;
@@ -2661,6 +2686,7 @@ export type Swap_Filter = {
   tx_not_contains?: InputMaybe<Scalars['Bytes']>;
   tx_not_in?: InputMaybe<Array<Scalars['Bytes']>>;
   userAddress?: InputMaybe<Scalars['String']>;
+  userAddress_?: InputMaybe<User_Filter>;
   userAddress_contains?: InputMaybe<Scalars['String']>;
   userAddress_contains_nocase?: InputMaybe<Scalars['String']>;
   userAddress_ends_with?: InputMaybe<Scalars['String']>;
@@ -2758,6 +2784,7 @@ export type TokenPrice_Filter = {
   id_not?: InputMaybe<Scalars['ID']>;
   id_not_in?: InputMaybe<Array<Scalars['ID']>>;
   poolId?: InputMaybe<Scalars['String']>;
+  poolId_?: InputMaybe<Pool_Filter>;
   poolId_contains?: InputMaybe<Scalars['String']>;
   poolId_contains_nocase?: InputMaybe<Scalars['String']>;
   poolId_ends_with?: InputMaybe<Scalars['String']>;
@@ -2844,6 +2871,7 @@ export type TokenSnapshot_Filter = {
   timestamp_not?: InputMaybe<Scalars['Int']>;
   timestamp_not_in?: InputMaybe<Array<Scalars['Int']>>;
   token?: InputMaybe<Scalars['String']>;
+  token_?: InputMaybe<Token_Filter>;
   token_contains?: InputMaybe<Scalars['String']>;
   token_contains_nocase?: InputMaybe<Scalars['String']>;
   token_ends_with?: InputMaybe<Scalars['String']>;
@@ -2956,6 +2984,7 @@ export type Token_Filter = {
   id_not?: InputMaybe<Scalars['ID']>;
   id_not_in?: InputMaybe<Array<Scalars['ID']>>;
   latestPrice?: InputMaybe<Scalars['String']>;
+  latestPrice_?: InputMaybe<LatestPrice_Filter>;
   latestPrice_contains?: InputMaybe<Scalars['String']>;
   latestPrice_contains_nocase?: InputMaybe<Scalars['String']>;
   latestPrice_ends_with?: InputMaybe<Scalars['String']>;
@@ -3102,6 +3131,7 @@ export type TradePairSnapshot_Filter = {
   id_not?: InputMaybe<Scalars['ID']>;
   id_not_in?: InputMaybe<Array<Scalars['ID']>>;
   pair?: InputMaybe<Scalars['String']>;
+  pair_?: InputMaybe<TradePair_Filter>;
   pair_contains?: InputMaybe<Scalars['String']>;
   pair_contains_nocase?: InputMaybe<Scalars['String']>;
   pair_ends_with?: InputMaybe<Scalars['String']>;
@@ -3167,6 +3197,7 @@ export type TradePair_Filter = {
   id_not?: InputMaybe<Scalars['ID']>;
   id_not_in?: InputMaybe<Array<Scalars['ID']>>;
   token0?: InputMaybe<Scalars['String']>;
+  token0_?: InputMaybe<Token_Filter>;
   token0_contains?: InputMaybe<Scalars['String']>;
   token0_contains_nocase?: InputMaybe<Scalars['String']>;
   token0_ends_with?: InputMaybe<Scalars['String']>;
@@ -3187,6 +3218,7 @@ export type TradePair_Filter = {
   token0_starts_with?: InputMaybe<Scalars['String']>;
   token0_starts_with_nocase?: InputMaybe<Scalars['String']>;
   token1?: InputMaybe<Scalars['String']>;
+  token1_?: InputMaybe<Token_Filter>;
   token1_contains?: InputMaybe<Scalars['String']>;
   token1_contains_nocase?: InputMaybe<Scalars['String']>;
   token1_ends_with?: InputMaybe<Scalars['String']>;
@@ -3301,6 +3333,7 @@ export type UserInternalBalance_Filter = {
   token_not_contains?: InputMaybe<Scalars['Bytes']>;
   token_not_in?: InputMaybe<Array<Scalars['Bytes']>>;
   userAddress?: InputMaybe<Scalars['String']>;
+  userAddress_?: InputMaybe<User_Filter>;
   userAddress_contains?: InputMaybe<Scalars['String']>;
   userAddress_contains_nocase?: InputMaybe<Scalars['String']>;
   userAddress_ends_with?: InputMaybe<Scalars['String']>;
@@ -3340,6 +3373,9 @@ export type User_Filter = {
   id_lte?: InputMaybe<Scalars['ID']>;
   id_not?: InputMaybe<Scalars['ID']>;
   id_not_in?: InputMaybe<Array<Scalars['ID']>>;
+  sharesOwned_?: InputMaybe<PoolShare_Filter>;
+  swaps_?: InputMaybe<Swap_Filter>;
+  userInternalBalances_?: InputMaybe<UserInternalBalance_Filter>;
 };
 
 export enum User_OrderBy {
@@ -3391,7 +3427,7 @@ export type PoolsQueryVariables = Exact<{
 }>;
 
 
-export type PoolsQuery = { __typename?: 'Query', pool0: Array<{ __typename?: 'Pool', id: string, address: string, poolType?: string | null, symbol?: string | null, name?: string | null, swapFee: string, totalWeight?: string | null, totalSwapVolume: string, totalSwapFee: string, totalLiquidity: string, totalShares: string, swapsCount: string, holdersCount: string, tokensList: Array<string>, amp?: string | null, expiryTime?: string | null, unitSeconds?: string | null, principalToken?: string | null, baseToken?: string | null, swapEnabled: boolean, wrappedIndex?: number | null, mainIndex?: number | null, lowerTarget?: string | null, upperTarget?: string | null, tokens?: Array<{ __typename?: 'PoolToken', id: string, symbol: string, name: string, decimals: number, address: string, balance: string, invested: string, weight?: string | null, priceRate: string }> | null }>, pool1000: Array<{ __typename?: 'Pool', id: string, address: string, poolType?: string | null, symbol?: string | null, name?: string | null, swapFee: string, totalWeight?: string | null, totalSwapVolume: string, totalSwapFee: string, totalLiquidity: string, totalShares: string, swapsCount: string, holdersCount: string, tokensList: Array<string>, amp?: string | null, expiryTime?: string | null, unitSeconds?: string | null, principalToken?: string | null, baseToken?: string | null, swapEnabled: boolean, wrappedIndex?: number | null, mainIndex?: number | null, lowerTarget?: string | null, upperTarget?: string | null, tokens?: Array<{ __typename?: 'PoolToken', id: string, symbol: string, name: string, decimals: number, address: string, balance: string, invested: string, weight?: string | null, priceRate: string }> | null }> };
+export type PoolsQuery = { __typename?: 'Query', pool0: Array<{ __typename?: 'Pool', id: string, address: string, poolType?: string | null, symbol?: string | null, name?: string | null, swapFee: string, totalWeight?: string | null, totalSwapVolume: string, totalSwapFee: string, totalLiquidity: string, totalShares: string, swapsCount: string, holdersCount: string, tokensList: Array<string>, amp?: string | null, expiryTime?: string | null, unitSeconds?: string | null, createTime: number, principalToken?: string | null, baseToken?: string | null, swapEnabled: boolean, wrappedIndex?: number | null, mainIndex?: number | null, lowerTarget?: string | null, upperTarget?: string | null, tokens?: Array<{ __typename?: 'PoolToken', id: string, symbol: string, name: string, decimals: number, address: string, balance: string, invested: string, weight?: string | null, priceRate: string }> | null }>, pool1000: Array<{ __typename?: 'Pool', id: string, address: string, poolType?: string | null, symbol?: string | null, name?: string | null, swapFee: string, totalWeight?: string | null, totalSwapVolume: string, totalSwapFee: string, totalLiquidity: string, totalShares: string, swapsCount: string, holdersCount: string, tokensList: Array<string>, amp?: string | null, expiryTime?: string | null, unitSeconds?: string | null, createTime: number, principalToken?: string | null, baseToken?: string | null, swapEnabled: boolean, wrappedIndex?: number | null, mainIndex?: number | null, lowerTarget?: string | null, upperTarget?: string | null, tokens?: Array<{ __typename?: 'PoolToken', id: string, symbol: string, name: string, decimals: number, address: string, balance: string, invested: string, weight?: string | null, priceRate: string }> | null }> };
 
 export type PoolQueryVariables = Exact<{
   id: Scalars['ID'];
@@ -3399,7 +3435,7 @@ export type PoolQueryVariables = Exact<{
 }>;
 
 
-export type PoolQuery = { __typename?: 'Query', pool?: { __typename?: 'Pool', id: string, address: string, poolType?: string | null, symbol?: string | null, name?: string | null, swapFee: string, totalWeight?: string | null, totalSwapVolume: string, totalSwapFee: string, totalLiquidity: string, totalShares: string, swapsCount: string, holdersCount: string, tokensList: Array<string>, amp?: string | null, expiryTime?: string | null, unitSeconds?: string | null, principalToken?: string | null, baseToken?: string | null, swapEnabled: boolean, wrappedIndex?: number | null, mainIndex?: number | null, lowerTarget?: string | null, upperTarget?: string | null, tokens?: Array<{ __typename?: 'PoolToken', id: string, symbol: string, name: string, decimals: number, address: string, balance: string, invested: string, weight?: string | null, priceRate: string }> | null } | null };
+export type PoolQuery = { __typename?: 'Query', pool?: { __typename?: 'Pool', id: string, address: string, poolType?: string | null, symbol?: string | null, name?: string | null, swapFee: string, totalWeight?: string | null, totalSwapVolume: string, totalSwapFee: string, totalLiquidity: string, totalShares: string, swapsCount: string, holdersCount: string, tokensList: Array<string>, amp?: string | null, expiryTime?: string | null, unitSeconds?: string | null, createTime: number, principalToken?: string | null, baseToken?: string | null, swapEnabled: boolean, wrappedIndex?: number | null, mainIndex?: number | null, lowerTarget?: string | null, upperTarget?: string | null, tokens?: Array<{ __typename?: 'PoolToken', id: string, symbol: string, name: string, decimals: number, address: string, balance: string, invested: string, weight?: string | null, priceRate: string }> | null } | null };
 
 export type PoolsWithoutLinearQueryVariables = Exact<{
   skip?: InputMaybe<Scalars['Int']>;
@@ -3421,7 +3457,7 @@ export type PoolWithoutLinearQueryVariables = Exact<{
 
 export type PoolWithoutLinearQuery = { __typename?: 'Query', pool?: { __typename?: 'Pool', id: string, address: string, poolType?: string | null, symbol?: string | null, name?: string | null, swapFee: string, totalWeight?: string | null, totalSwapVolume: string, totalSwapFee: string, totalLiquidity: string, totalShares: string, swapsCount: string, holdersCount: string, tokensList: Array<string>, amp?: string | null, expiryTime?: string | null, unitSeconds?: string | null, principalToken?: string | null, baseToken?: string | null, swapEnabled: boolean, tokens?: Array<{ __typename?: 'PoolToken', id: string, symbol: string, name: string, decimals: number, address: string, balance: string, invested: string, weight?: string | null, priceRate: string }> | null } | null };
 
-export type SubgraphPoolFragment = { __typename?: 'Pool', id: string, address: string, poolType?: string | null, symbol?: string | null, name?: string | null, swapFee: string, totalWeight?: string | null, totalSwapVolume: string, totalSwapFee: string, totalLiquidity: string, totalShares: string, swapsCount: string, holdersCount: string, tokensList: Array<string>, amp?: string | null, expiryTime?: string | null, unitSeconds?: string | null, principalToken?: string | null, baseToken?: string | null, swapEnabled: boolean, wrappedIndex?: number | null, mainIndex?: number | null, lowerTarget?: string | null, upperTarget?: string | null, tokens?: Array<{ __typename?: 'PoolToken', id: string, symbol: string, name: string, decimals: number, address: string, balance: string, invested: string, weight?: string | null, priceRate: string }> | null };
+export type SubgraphPoolFragment = { __typename?: 'Pool', id: string, address: string, poolType?: string | null, symbol?: string | null, name?: string | null, swapFee: string, totalWeight?: string | null, totalSwapVolume: string, totalSwapFee: string, totalLiquidity: string, totalShares: string, swapsCount: string, holdersCount: string, tokensList: Array<string>, amp?: string | null, expiryTime?: string | null, unitSeconds?: string | null, createTime: number, principalToken?: string | null, baseToken?: string | null, swapEnabled: boolean, wrappedIndex?: number | null, mainIndex?: number | null, lowerTarget?: string | null, upperTarget?: string | null, tokens?: Array<{ __typename?: 'PoolToken', id: string, symbol: string, name: string, decimals: number, address: string, balance: string, invested: string, weight?: string | null, priceRate: string }> | null };
 
 export type SubgraphPoolWithoutLinearFragment = { __typename?: 'Pool', id: string, address: string, poolType?: string | null, symbol?: string | null, name?: string | null, swapFee: string, totalWeight?: string | null, totalSwapVolume: string, totalSwapFee: string, totalLiquidity: string, totalShares: string, swapsCount: string, holdersCount: string, tokensList: Array<string>, amp?: string | null, expiryTime?: string | null, unitSeconds?: string | null, principalToken?: string | null, baseToken?: string | null, swapEnabled: boolean, tokens?: Array<{ __typename?: 'PoolToken', id: string, symbol: string, name: string, decimals: number, address: string, balance: string, invested: string, weight?: string | null, priceRate: string }> | null };
 
@@ -3574,6 +3610,7 @@ export const SubgraphPoolFragmentDoc = gql`
   amp
   expiryTime
   unitSeconds
+  createTime
   principalToken
   baseToken
   swapEnabled
