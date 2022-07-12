@@ -1,16 +1,16 @@
 {
-    "name": "@balancer-labs/sdk",
+    "name": "@ape.swap/swap-v2-sdk",
     "version": "0.1.17",
     "description": "JavaScript SDK for interacting with the Balancer Protocol V2",
     "license": "GPL-3.0-only",
-    "homepage": "https://github.com/balancer-labs/balancer-sdk/balancer-js#readme",
+    "homepage": "https://github.com/ApeSwapFinance/apeswap-swap-v2-sdk/balancer-js#readme",
     "repository": {
         "type": "git",
-        "url": "https://github.com/balancer-labs/balancer-sdk",
+        "url": "https://github.com/ApeSwapFinance/apeswap-swap-v2-sdk",
         "directory": "balancer-js"
     },
     "bugs": {
-        "url": "https://github.com/balancer-labs/balancer-sdk/issues"
+        "url": "https://github.com/ApeSwapFinance/apeswap-swap-v2-sdk/issues"
     },
     "main": "dist/index.js",
     "module": "dist/index.esm.js",

@@ -1,6 +1,6 @@
 # Balancer Javascript SDK
 
-A JavaScript SDK which provides commonly used utilties for interacting with Balancer Protocol V2.
+A JavaScript SDK which provides commonly used utilities for interacting with Balancer Protocol V2.
 
 ## Installation
 
