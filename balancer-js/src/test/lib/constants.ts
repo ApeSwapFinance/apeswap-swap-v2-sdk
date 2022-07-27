@@ -72,95 +72,62 @@ export const ADDRESSES = {
       symbol: 'waUSDC',
     },
   },
-  [Network.KOVAN]: {
+  // FIXME: Fill out config below for all networks
+  [Network.BSC]: {
     // Visit https://balancer-faucet.on.fleek.co/#/faucet for test tokens
     BatchRelayer: {
-      address: '0x41B953164995c11C81DA73D212ED8Af25741b7Ac',
+      address: '',
+    },
+    BNB: {
+      address: AddressZero,
+      decimals: 18,
+      symbol: 'BNB',
+    },
+    // TODO: Check that WBNB is used as the native wrapped token on BSC
+    WBNB: {
+      address: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
+      decimals: 18,
+      symbol: 'WBNB',
+    },
+    BANANA: {
+      address: '0x603c7f932ED1fc6575303D8Fb018fDCBb0f39a95',
+      decimals: 18,
+      symbol: 'BANANA',
     },
     ETH: {
-      address: AddressZero,
+      address: '0x2170Ed0880ac9A755fd29B2688956BD959F933F8',
       decimals: 18,
       symbol: 'ETH',
     },
-    BAL: {
-      address: '0x41286Bb1D3E870f3F750eB7E1C25d7E48c8A1Ac7',
+    BTCB: {
+      address: '0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c',
       decimals: 18,
-      symbol: 'BAL',
+      symbol: `BTCB`,
+    },
+    BUSD: {
+      address: '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56',
+      decimals: 18,
+      symbol: 'BUSD',
     },
     USDC: {
-      address: '0xc2569dd7d0fd715B054fBf16E75B001E5c0C1115',
-      decimals: 6,
+      address: '0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d',
+      decimals: 18,
       symbol: 'USDC',
     },
-    WBTC: {
-      address: '0x1C8E3Bcb3378a443CC591f154c5CE0EBb4dA9648',
-      decimals: 8,
-      symbol: 'WBTC',
-    },
-    WETH: {
-      address: '0xdFCeA9088c8A88A76FF74892C1457C17dfeef9C1',
-      decimals: 18,
-      symbol: 'WETH',
-    },
     DAI: {
-      address: '0x04DF6e4121c27713ED22341E7c7Df330F56f289B',
+      address: '0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3',
       decimals: 18,
       symbol: 'DAI',
     },
-    STETH: {
-      address: '0x4803bb90d18a1cb7a2187344fe4feb0e07878d05',
-      decimals: 18,
-      symbol: 'STETH',
-    },
-    wSTETH: {
-      address: '0xa387b91e393cfb9356a460370842bc8dbb2f29af',
-      decimals: 18,
-      symbol: 'wSTETH',
-    },
-    USDT_from_AAVE: {
-      address: '0x13512979ade267ab5100878e2e0f485b568328a4',
-      decimals: 6,
-      symbol: 'USDT_from_AAVE',
-    },
     USDT: {
-      address: '0x13512979ade267ab5100878e2e0f485b568328a4',
-      decimals: 6,
+      address: '0x55d398326f99059fF775485246999027B3197955',
+      decimals: 18,
       symbol: 'USDT',
     },
-    aUSDT: {
-      address: '0xe8191aacfcdb32260cda25830dc6c9342142f310',
-      decimals: 6,
-      symbol: 'aUSDT',
-    },
-    bUSDT: {
-      address: '0xe667d48618e71c2a02e4a1b66ed9def1426938b6',
+    STETH: {
+      address: 'N/A',
       decimals: 18,
-      symbol: 'bUSDT',
-    },
-    USDC_from_AAVE: {
-      address: '0xe22da380ee6b445bb8273c81944adeb6e8450422',
-      decimals: 6,
-      symbol: 'USDC_from_AAVE',
-    },
-    aUSDC: {
-      address: '0x0fbddc06a4720408a2f5eb78e62bc31ac6e2a3c4',
-      decimals: 6,
-      symbol: 'aUSDC',
-    },
-    DAI_from_AAVE: {
-      address: '0xff795577d9ac8bd7d90ee22b6c1703490b6512fd',
-      decimals: 18,
-      symbol: 'DAI_from_AAVE',
-    },
-    bDAI: {
-      address: '0xfcccb77a946b6a3bd59d149f083b5bfbb8004d6d',
-      decimals: 18,
-      symbol: 'bDAI',
-    },
-    STABAL3: {
-      address: '0x8fd162f338b770f7e879030830cde9173367f301',
-      decimals: 18,
-      symbol: 'STABAL3',
+      symbol: 'STETH',
     },
     bbausd: {
       address: 'N/A',
@@ -168,76 +135,56 @@ export const ADDRESSES = {
       symbol: 'bbausd',
     },
   },
-  [Network.POLYGON]: {
-    MATIC: {
+  [Network.BSC_DUMMY]: {
+    BNB: {
       address: AddressZero,
       decimals: 18,
-      symbol: 'MATIC',
+      symbol: 'BNB',
     },
-    LINK: {
-      address: '0x53E0bca35eC356BD5ddDFebbD1Fc0fD03FaBad39',
+    WBNB: {
+      address: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
       decimals: 18,
-      symbol: 'LINK',
+      symbol: 'WBNB',
     },
-    BAL: {
-      address: '0x9a71012b13ca4d3d0cdc72a177df3ef03b0e76a3',
+    BANANA: {
+      address: '0x603c7f932ED1fc6575303D8Fb018fDCBb0f39a95',
       decimals: 18,
-      symbol: 'BAL',
+      symbol: 'BANANA',
+    },
+    ETH: {
+      address: '0x2170Ed0880ac9A755fd29B2688956BD959F933F8',
+      decimals: 18,
+      symbol: 'ETH',
+    },
+    BTCB: {
+      address: '0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c',
+      decimals: 18,
+      symbol: `BTCB`,
+    },
+    BUSD: {
+      address: '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56',
+      decimals: 18,
+      symbol: 'BUSD',
     },
     USDC: {
-      address: '0x2791bca1f2de4661ed88a30c99a7a9449aa84174',
-      decimals: 6,
+      address: '0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d',
+      decimals: 18,
       symbol: 'USDC',
     },
-    WBTC: {
-      address: '0x1bfd67037b42cf73acf2047067bd4f2c47d9bfd6',
-      decimals: 8,
-      symbol: 'WBTC',
-    },
-    WETH: {
-      address: '0x7ceb23fd6bc0add59e62ac25578270cff1b9f619',
-      decimals: 18,
-      symbol: 'WETH',
-    },
     DAI: {
-      address: '0x8f3cf7ad23cd3cadbd9735aff958023239c6a063',
+      address: '0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3',
       decimals: 18,
       symbol: 'DAI',
     },
-    STETH: {
-      address: '0xae7ab96520de3a18e5e111b5eaab095312d7fe84',
-      decimals: 18,
-      symbol: 'STETH',
-    },
-    stUSD_PLUS: {
-      address: '0x5a5c6aa6164750b530b8f7658b827163b3549a4d',
-      decimals: 6,
-      symbol: 'stUSD+',
-    },
-    bstUSD_PLUS: {
-      address: '0x1aafc31091d93c3ff003cff5d2d8f7ba2e728425',
-      decimals: 18,
-      symbol: 'bstUSD+',
-    },
-    USD_PLUS: {
-      address: '0x5d9d8509c522a47d9285b9e4e9ec686e6a580850',
-      decimals: 6,
-      symbol: 'USD_PLUS',
-    },
     USDT: {
-      address: '0xc2132D05D31c914a87C6611C10748AEb04B58e8F',
-      decimals: 6,
+      address: '0x55d398326f99059fF775485246999027B3197955',
+      decimals: 18,
       symbol: 'USDT',
     },
-    DHT: {
-      address: '0x8C92e38eCA8210f4fcBf17F0951b198Dd7668292',
+    STETH: {
+      address: 'N/A',
       decimals: 18,
-      symbol: 'DHT',
-    },
-    dUSD: {
-      address: '0xbAe28251B2a4E621aA7e20538c06DEe010Bc06DE',
-      decimals: 18,
-      symbol: 'dUSD',
+      symbol: 'STETH',
     },
     bbausd: {
       address: 'N/A',
@@ -245,30 +192,50 @@ export const ADDRESSES = {
       symbol: 'bbausd',
     },
   },
-  [Network.ARBITRUM]: {
-    WETH: {
-      address: '0x82af49447d8a07e3bd95bd0d56f35241523fbab1',
+  [Network.BSC_TESTNET]: {
+    BNB: {
+      address: AddressZero,
       decimals: 18,
-      symbol: 'WETH',
+      symbol: 'BNB',
     },
-    BAL: {
-      address: '0x040d1edc9569d4bab2d15287dc5a4f10f56a56b8',
+    WBNB: {
+      address: '0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd',
       decimals: 18,
-      symbol: 'BAL',
+      symbol: 'WBNB',
+    },
+    BANANA: {
+      address: '0x4Fb99590cA95fc3255D9fA66a1cA46c43C34b09a',
+      decimals: 18,
+      symbol: 'BANANA',
+    },
+    ETH: {
+      address: 'N/A',
+      decimals: 18,
+      symbol: 'ETH',
+    },
+    BTCB: {
+      address: 'N/A',
+      decimals: 18,
+      symbol: `BTCB`,
+    },
+    BUSD: {
+      address: '0x9Fac5878Da670aDB06a21ff127C79e0De8BF3c53',
+      decimals: 18,
+      symbol: 'BUSD',
     },
     USDC: {
-      address: '0xff970a61a04b1ca14834a43f5de4533ebddb5cc8',
-      decimals: 6,
+      address: 'N/A',
+      decimals: 18,
       symbol: 'USDC',
     },
     DAI: {
-      address: '0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1',
+      address: 'N/A',
       decimals: 18,
       symbol: 'DAI',
     },
     USDT: {
-      address: '0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9',
-      decimals: 6,
+      address: 'N/A',
+      decimals: 18,
       symbol: 'USDT',
     },
     STETH: {

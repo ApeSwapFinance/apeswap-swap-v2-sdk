@@ -1,7 +1,19 @@
 import { Network } from './network';
 import { BalancerNetworkConfig } from '@/types';
 
-export const apeswapVault = '0x000a9e000a35f2cBbE4326578E19dd8Fb4913719';
+/**
+ * // FIXME: BSC_DUMMY vault address being used currently
+ * 
+ * Balancer has deployed the same vault address on every chain which allows them to use a single address here around
+ * the SDK. ApeSwap has deployed a DUMMY vault on BSC along with the production vault for testing along with Ola,
+ * which makes this singular address tricky.
+ * 
+ * For testing purposes we are using the DUMMY vault.
+ */
+// export const apeswapVault = '0x000a9e000a35f2cBbE4326578E19dd8Fb4913719';
+export const apeswapVault = '0x42B7888FFf938C54faeDF52485C8323c4Fc8C99B';
+// TODO: Remove log
+console.log(`swap-v2-sdk/config.ts:: using apeswapVault: ${apeswapVault}.`);
 
 export const APESWAP_NETWORK_CONFIG: Record<Network, BalancerNetworkConfig> = {
   [Network.BSC]: {
@@ -16,6 +28,7 @@ export const APESWAP_NETWORK_CONFIG: Record<Network, BalancerNetworkConfig> = {
       },
     },
     urls: {
+      // FIXME: Need to add subgraph url
       subgraph: '',
     },
     pools: {},
@@ -89,3 +102,7 @@ export const networkAddresses = (
   chainId: number
 ): BalancerNetworkConfig['addresses'] =>
   APESWAP_NETWORK_CONFIG[chainId as Network].addresses;
+
+// TODO: Dynamic vault address?
+// export const apeswapVault = (chainId: number): string =>
+//   APESWAP_NETWORK_CONFIG[chainId as Network].addresses.contracts.vault;

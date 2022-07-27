@@ -1,7 +1,7 @@
 import { BalancerSDK } from '@/.';
 import { JsonRpcProvider, JsonRpcSigner } from '@ethersproject/providers';
 import { BigNumber } from '@ethersproject/bignumber';
-import { balancerVault } from '@/lib/constants/config';
+import { apeswapVault } from '@/lib/constants/config';
 import { hexlify, zeroPad } from '@ethersproject/bytes';
 import { keccak256 } from '@ethersproject/solidity';
 
@@ -90,5 +90,5 @@ export const approveToken = async (
   signer: JsonRpcSigner
 ): Promise<boolean> => {
   const tokenContract = balancer.contracts.ERC20(token, signer.provider);
-  return await tokenContract.connect(signer).approve(balancerVault, amount);
+  return await tokenContract.connect(signer).approve(apeswapVault, amount);
 };

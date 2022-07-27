@@ -130,7 +130,8 @@ export async function getOnChainBalances(
       }
     >;
   } catch (err) {
-    throw `Issue with multicall execution.`;
+    console.dir({ multicallErr: err }, { depth: null });
+    throw new Error(`Issue with multicall execution.`);
   }
 
   const onChainPools: SubgraphPoolBase[] = [];
