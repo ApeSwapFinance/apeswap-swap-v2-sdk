@@ -135,63 +135,6 @@ export const ADDRESSES = {
       symbol: 'bbausd',
     },
   },
-  [Network.BSC_DUMMY]: {
-    BNB: {
-      address: AddressZero,
-      decimals: 18,
-      symbol: 'BNB',
-    },
-    WBNB: {
-      address: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
-      decimals: 18,
-      symbol: 'WBNB',
-    },
-    BANANA: {
-      address: '0x603c7f932ED1fc6575303D8Fb018fDCBb0f39a95',
-      decimals: 18,
-      symbol: 'BANANA',
-    },
-    ETH: {
-      address: '0x2170Ed0880ac9A755fd29B2688956BD959F933F8',
-      decimals: 18,
-      symbol: 'ETH',
-    },
-    BTCB: {
-      address: '0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c',
-      decimals: 18,
-      symbol: `BTCB`,
-    },
-    BUSD: {
-      address: '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56',
-      decimals: 18,
-      symbol: 'BUSD',
-    },
-    USDC: {
-      address: '0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d',
-      decimals: 18,
-      symbol: 'USDC',
-    },
-    DAI: {
-      address: '0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3',
-      decimals: 18,
-      symbol: 'DAI',
-    },
-    USDT: {
-      address: '0x55d398326f99059fF775485246999027B3197955',
-      decimals: 18,
-      symbol: 'USDT',
-    },
-    STETH: {
-      address: 'N/A',
-      decimals: 18,
-      symbol: 'STETH',
-    },
-    bbausd: {
-      address: 'N/A',
-      decimals: 18,
-      symbol: 'bbausd',
-    },
-  },
   [Network.BSC_TESTNET]: {
     BNB: {
       address: AddressZero,

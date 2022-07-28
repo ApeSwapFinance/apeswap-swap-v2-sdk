@@ -10,6 +10,5 @@ export enum Network {
 
   // ApeSwap Additions
   BSC = 56,
-  BSC_DUMMY = -56, // Flipping the value to support two vaults on the same network
   BSC_TESTNET = 97,
 }

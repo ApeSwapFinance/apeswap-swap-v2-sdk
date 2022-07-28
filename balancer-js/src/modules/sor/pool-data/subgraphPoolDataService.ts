@@ -19,7 +19,7 @@ const NETWORKS_WITH_LINEAR_POOLS = [
   // Network.KOVAN,
   // NOTE: ApeSwap Additions
   Network.BSC,
-  Network.BSC_DUMMY,
+  Network.BSC_TESTNET,
 ];
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

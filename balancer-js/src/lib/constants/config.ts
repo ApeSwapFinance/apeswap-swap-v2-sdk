@@ -2,53 +2,58 @@ import { Network } from './network';
 import { BalancerNetworkConfig } from '@/types';
 
 /**
- * // FIXME: BSC_DUMMY vault address being used currently
- * 
- * Balancer has deployed the same vault address on every chain which allows them to use a single address here around
+ * // NOTE: Balancer has deployed the same vault address on every chain which allows them to use a single address here around
  * the SDK. ApeSwap has deployed a DUMMY vault on BSC along with the production vault for testing along with Ola,
  * which makes this singular address tricky.
- * 
+ *
  * For testing purposes we are using the DUMMY vault.
  */
+const BSC_PRODUCTION = {
+  chainId: Network.BSC, //56
+  addresses: {
+    contracts: {
+      vault: '0x000a9e000a35f2cBbE4326578E19dd8Fb4913719',
+      multicall: '0xC50F4c1E81c873B2204D7eFf7069Ffec6Fbe136D',
+    },
+    tokens: {
+      wrappedNativeAsset: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
+    },
+  },
+  urls: {
+    // FIXME: Need to add subgraph url
+    subgraph: '',
+  },
+  pools: {},
+};
+
+const BSC_DUMMY = {
+  chainId: Network.BSC, //56
+  addresses: {
+    contracts: {
+      vault: '0x42B7888FFf938C54faeDF52485C8323c4Fc8C99B',
+      multicall: '0xC50F4c1E81c873B2204D7eFf7069Ffec6Fbe136D',
+    },
+    tokens: {
+      wrappedNativeAsset: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
+    },
+  },
+  urls: {
+    subgraph: 'http://65.108.138.33:8000/subgraphs/name/apeswap/balancer-v2',
+  },
+  pools: {},
+};
+
+// NOTE: Balancer exports a hardcoded vault address
 // export const apeswapVault = '0x000a9e000a35f2cBbE4326578E19dd8Fb4913719';
-export const apeswapVault = '0x42B7888FFf938C54faeDF52485C8323c4Fc8C99B';
+// export const apeswapVault = '0x42B7888FFf938C54faeDF52485C8323c4Fc8C99B';
+// FIXME: Using BSC_DUMMY config
+const bscConfig = BSC_DUMMY;
+export const apeswapVault = bscConfig.addresses.contracts.vault;
 // TODO: Remove log
 console.log(`swap-v2-sdk/config.ts:: using apeswapVault: ${apeswapVault}.`);
 
 export const APESWAP_NETWORK_CONFIG: Record<Network, BalancerNetworkConfig> = {
-  [Network.BSC]: {
-    chainId: Network.BSC, //56
-    addresses: {
-      contracts: {
-        vault: '0x000a9e000a35f2cBbE4326578E19dd8Fb4913719',
-        multicall: '0xC50F4c1E81c873B2204D7eFf7069Ffec6Fbe136D',
-      },
-      tokens: {
-        wrappedNativeAsset: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
-      },
-    },
-    urls: {
-      // FIXME: Need to add subgraph url
-      subgraph: '',
-    },
-    pools: {},
-  },
-  [Network.BSC_DUMMY]: {
-    chainId: Network.BSC, //56
-    addresses: {
-      contracts: {
-        vault: '0x42B7888FFf938C54faeDF52485C8323c4Fc8C99B',
-        multicall: '0xC50F4c1E81c873B2204D7eFf7069Ffec6Fbe136D',
-      },
-      tokens: {
-        wrappedNativeAsset: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
-      },
-    },
-    urls: {
-      subgraph: 'http://65.108.138.33:8000/subgraphs/name/apeswap/balancer-v2',
-    },
-    pools: {},
-  },
+  [Network.BSC]: bscConfig,
   [Network.BSC_TESTNET]: {
     chainId: Network.BSC_TESTNET, //97
     addresses: {
