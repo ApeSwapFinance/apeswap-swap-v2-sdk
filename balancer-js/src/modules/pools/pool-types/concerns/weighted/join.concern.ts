@@ -12,7 +12,7 @@ import {
 import { Pool } from '@/types';
 import { subSlippage } from '@/lib/utils/slippageHelper';
 import { AssetHelpers } from '@/lib/utils';
-import { balancerVault } from '@/lib/constants/config';
+import { apeswapVault } from '@/lib/constants/config';
 import { Vault__factory } from '@balancer-labs/typechain';
 import { BigNumber, parseFixed } from '@ethersproject/bignumber';
 import { AddressZero } from '@ethersproject/constants';
@@ -108,7 +108,7 @@ export class WeightedPoolJoin implements JoinConcern {
       minBPTOut
     );
 
-    const to = balancerVault;
+    const to = apeswapVault;
     const functionName = 'joinPool';
     const attributes: JoinPool = {
       poolId: pool.id,

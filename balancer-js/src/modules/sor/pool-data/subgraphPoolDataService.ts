@@ -12,11 +12,14 @@ import { BalancerNetworkConfig, BalancerSdkSorConfig } from '@/types';
 
 const NETWORKS_WITH_LINEAR_POOLS = [
   Network.MAINNET,
-  Network.POLYGON,
-  Network.ROPSTEN,
-  Network.RINKEBY,
-  Network.GOERLI,
-  Network.KOVAN,
+  // Network.POLYGON,
+  // Network.ROPSTEN,
+  // Network.RINKEBY,
+  // Network.GOERLI,
+  // Network.KOVAN,
+  // NOTE: ApeSwap Additions
+  Network.BSC,
+  Network.BSC_TESTNET,
 ];
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

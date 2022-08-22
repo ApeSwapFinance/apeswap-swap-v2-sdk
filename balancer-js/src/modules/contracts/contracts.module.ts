@@ -1,8 +1,8 @@
 import { Contract } from '@ethersproject/contracts';
 import { Provider } from '@ethersproject/providers';
 import { ContractAddresses } from '@/types';
-import { Network } from '@/lib/constants/network';
-import { BALANCER_NETWORK_CONFIG } from '@/lib/constants/config';
+import { Network } from '@/lib/constants/networkBalancer';
+import { BALANCER_NETWORK_CONFIG } from '@/lib/constants/configBalancer';
 import {
   Vault__factory,
   Vault,
