@@ -38,19 +38,21 @@ const BSC_DUMMY = {
     },
   },
   urls: {
-    subgraph: 'http://65.108.138.33:8000/subgraphs/name/apeswap/balancer-v2',
+    subgraph:
+      'https://balancer.apeswapgraphs.com/subgraphs/name/apeswap/balancer-v2',
   },
   pools: {},
 };
 
-// NOTE: Balancer exports a hardcoded vault address
-// export const apeswapVault = '0x000a9e000a35f2cBbE4326578E19dd8Fb4913719';
-// export const apeswapVault = '0x42B7888FFf938C54faeDF52485C8323c4Fc8C99B';
-// FIXME: Using BSC_DUMMY config
-const bscConfig = BSC_DUMMY;
+
+const useDummy = Boolean(process.env.VUE_APP_DUMMY);
+const bscConfig = process.env.VUE_APP_DUMMY ? BSC_DUMMY : BSC_PRODUCTION;
 export const apeswapVault = bscConfig.addresses.contracts.vault;
 // TODO: Remove log
 console.log(`swap-v2-sdk/config.ts:: using apeswapVault: ${apeswapVault}.`);
+if (useDummy) {
+  console.log(`swap-v2-sdk/config.ts:: using BSC DUMMY config.`);
+}
 
 export const APESWAP_NETWORK_CONFIG: Record<Network, BalancerNetworkConfig> = {
   [Network.BSC]: bscConfig,
